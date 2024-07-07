@@ -4,31 +4,30 @@
 <head>
     <title>Formulario Ingreso de datos de Clientes</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 
-<body> 
+<body>
     <div class="titulo">
         <h1>Ingreso de datos del cliente</h1>
     </div>
     <main>
         <h1 style="color: red; font-family: 'Times New Roman', Times, serif;">Informacion Personal</h1>
         <form action="" class="formulario" id="formulario">
-            
+
             <!-- NOMBRES -->
             <div class="formulario__grupo" id="grupo__nombres">
-                <label for="apellidos" class="formulario__label">NOMBRES</label>
+                <label for="nombres" class="formulario__label">NOMBRES</label>
                 <div class="formulario__grupo-input">
                     <input type="text" class="formulario__input" name="nombres" id="nombres" placeholder="Dayana Katherine">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="formulario__input-error">Este casillero solo puede contener letras.</p>
             </div>
-              <!-- APELLIDOS -->
-              <div class="formulario__grupo" id="grupo__apellidos">
+            <!-- APELLIDOS -->
+            <div class="formulario__grupo" id="grupo__apellidos">
                 <label for="apellidos" class="formulario__label">APELLIDOS</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="  Anchundia Piloso">
+                    <input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="Anchundia Piloso">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="formulario__input-error">Este casillero solo puede contener letras.</p>
@@ -52,22 +51,21 @@
                 </div>
                 <p class="formulario__input-error">El teléfono sólo puede contener números y el máximo son 10 dígitos.</p>
             </div>
-        
 
-             <!-- DIRECCION -->
-             <div class="formulario__grupo" id="grupo__direccion">
-                <label for="Direccion" class="formulario__label">DIRECCIÓN</label>
+            <!-- DIRECCION -->
+            <div class="formulario__grupo" id="grupo__direccion">
+                <label for="direccion" class="formulario__label">DIRECCIÓN</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="direccion" id="direccion" placeholder=" Calle 12 av 20_3">
+                    <input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Calle 12 av 20_3">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="formulario__input-error">Este casillero puede contener letras, numero, caracteres.</p>
             </div>
 
-             <!-- Pais -->
-              <div>
-                <label for="Direccion" class="formulario__label">PAIS</label>
-                <select name="paises" class="formulario__input">
+            <!-- PAIS -->
+            <div class="formulario__grupo" id="grupo__pais">
+                <label for="paises" class="formulario__label">PAIS</label>
+                <select name="paises" class="formulario__input" id="paises">
                     <option value=""></option>
                     <option value="Argentina">Argentina</option>
                     <option value="Bolivia">Bolivia</option>
@@ -78,7 +76,7 @@
                     <option value="El Salvador">El Salvador</option>
                     <option value="Estados Unido">Estados Unido</option>
                 </select>
-              </div>
+            </div>
 
             <!-- CORREO -->
             <div class="formulario__grupo" id="grupo__correo">
@@ -89,27 +87,27 @@
                 </div>
                 <p class="formulario__input-error">El correo sólo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
             </div>
-            
+
             <!-- FECHA DE NACIMIENTO -->
             <div class="formulario__grupo" id="grupo__fechaNacimiento">
-                <label for="fechaNacimiento" class="formulario__label">fechaNacimiento</label>
+                <label for="fechaNacimiento" class="formulario__label">Fecha de Nacimiento</label>
                 <div class="formulario__grupo-input">
-                    <input type="date" name="date_control" class="formulario__label"> <br>
+                    <input type="date" name="fechaNacimiento" class="formulario__input" id="fechaNacimiento">
                 </div>
                 <p class="formulario__input-error">Ingrese su fecha de nacimiento</p>
             </div>
-           
+
             <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button id="button" class="formulario__btn" onclick="Guardar()">Guardar</button>
+                <button type="submit" class="formulario__btn">Guardar</button>
                 <button type="button" class="formulario__btn" onclick="Limpiar()">Limpiar</button>
-                
             </div>
         </form>
-    
+
+        <div id="formulario__mensaje" class="formulario__mensaje">Por favor complete los campos correctamente.</div>
+        <div id="formulario__mensaje-exito" class="formulario__mensaje-exito">Formulario enviado exitosamente!</div>
     </main>
 
     <script src="script.js"></script>
-    </body>
-
+</body>
 
 </html>
